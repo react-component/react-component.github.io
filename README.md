@@ -1,4 +1,5 @@
-react-component.github.io
-=========================
+# react-component.github.io
 
 docs and site of react-component
+
+http://react-component.github.io
