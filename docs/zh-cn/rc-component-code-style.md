@@ -58,6 +58,7 @@ var Menu = React.createClass({
 \````
 
 \````js
+/** @jsx React.DOM */
 var React = require('react');
 React.render(<Menu className = "nav-bar nav"></Menu>, document.getElementById('react-content'));
 \````
