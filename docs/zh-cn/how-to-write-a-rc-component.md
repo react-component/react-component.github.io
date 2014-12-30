@@ -13,32 +13,32 @@ author: yiminghe@gmail.com
 
 ## 源码
 
-- 在 lib 目录中写 js，在 assets 目录下 css，在 tests 目录下写 测试用例，规范参考 [react 组件代码规范](./rc-component-code-style.md).
-- 开发中用到其他公共库，通过 npm install --save 以及 npm install --save-dev 来安装
+- 在 lib 目录中写 js，在 assets 目录下写 less，在 tests 目录下写 测试用例，代码规范参考 [react 组件代码规范](./rc-component-code-style.md).
+- 开发中用到其他公共库，通过 `npm install --save` 以及 `npm install --save-dev` 来安装
 
 ## 启用开源平台服务
 
 ### travis-ci
 
-访问 http://https://travis-ci.org/profile 开启对应 git 库
+登陆 travis 后访问 http://https://travis-ci.org/profile 开启对应 git 库
 
 ### coveralls.io
 
-访问 https://coveralls.io/repos/new 开启对应 git 库
+登陆 travis 后访问 https://coveralls.io/repos/new 开启对应 git 库
 
 ### saucelabs.com
 
 - 访问 https://saucelabs.com/opensauce 注册对应 npm 包名的账号，
 - 以该账号登陆后，访问 https://docs.saucelabs.com/ci-integrations/travis-ci/
-- 在库根目录执行 gem install travis 和之后的两个 travis encrypt 命令
+- 在库根目录执行 `gem install travis` 和上述网页中的两个 `travis encrypt` 命令
 
 ## 开发调试
 
-- 在项目根目录执行 npm install
-- 在项目根目录执行 npm start
-- 打开 http://localhost:xxxx 访问库, xxxx 为脚手架配置的网络端口
-- 打开 http://localhost:xxxx/examples/index.md 查看示例
-- 打开 http://localhost:xxxx/tests/runner.html 运行测试
+- 在项目根目录执行 `npm install`
+- 在项目根目录执行 `npm start`
+- 打开 `http://localhost:xxxx` 访问库, xxxx 为脚手架配置的网络端口
+- 打开 `http://localhost:xxxx/examples/index.md` 查看示例
+- 打开 `http://localhost:xxxx/tests/runner.html` 运行测试
 
 ## 支持 spm
 
@@ -59,9 +59,9 @@ author: yiminghe@gmail.com
 
 ## 支持 HISTORY.md
 
-- 通过在根目录运行 npm run history 生成 HISTORY.md
+- 通过在根目录运行 `npm run history` 生成 HISTORY.md
 - 需要建立必要的 milestone，issue，label，参见： https://github.com/yiminghe/gh-history
-- milestone 标题为语义化版本好，issue 属于某个 milestone，并且具备 label
+- milestone 标题为语义化版本号，issue 属于某个 milestone，并且具备 label
 - label 为枚举，包括
  - `new` 新增的属性、功能、方法、特性等等
  - `fixed` 修复 bug 和影响使用的性能问题等
