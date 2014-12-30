@@ -47,13 +47,20 @@ var Menu = React.createClass({
 ### examples
 
 - examples 格式为 md，通过 \`\`\`\`js \`\`\`\`html 引入高亮并执行的代码，通过 \```js \```html 仅引入高亮的代码
+- \`\`\`\`js 中的 js 代码为 commonjs 格式，第一行为注释 `/** @jsx React.DOM */`
 - examples 引入 bootstrap 样式，通过配置组件的 className 使用 bootstrap 样式
 
 ```
 <link href="/node_modules/bootstrap/dist/css/bootstrap.css?nowrap"/>
-<div id="react-content"></div>
 
+\````html
+<div id="react-content"></div>
+\````
+
+\````js
+var React = require('react');
 React.render(<Menu className = "nav-bar nav"></Menu>, document.getElementById('react-content'));
+\````
 
 ```
 
