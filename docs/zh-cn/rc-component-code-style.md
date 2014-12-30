@@ -13,6 +13,7 @@ author: yiminghe@gmail.com
 
 ### js 源码
 
+- 代码通过 jshint（在根目录运行 npm run lint）
 - js 模块采用 commonjs 格式，主体代码放在 lib 目录下，根目录 index.js 仅引用 lib 下相关文件
 - 公共包通过 npm install 后，js 中可以 require node_modules 下的公共包 js，但不可以 require css
 - 模块如果返回值是个类，则文件名大写

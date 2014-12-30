@@ -57,6 +57,17 @@ author: yiminghe@gmail.com
 }
 ```
 
+## 支持 HISTORY.md
+
+- 通过在根目录运行 npm run history 生成 HISTORY.md
+- 需要建立必要的 milestone，issue，label，参见： https://github.com/yiminghe/gh-history
+- milestone 标题为语义化版本好，issue 属于某个 milestone，并且具备 label
+- label 为枚举，包括
+ - `new` 新增的属性、功能、方法、特性等等
+ - `fixed` 修复 bug 和影响使用的性能问题等
+ - `improved` 接口增强、健壮性和性能提升、代码优化、依赖模块升级等。
+ - `changed` 涉及到兼容性变化的改动。
+
 ## 发布
 
 - 在根目录运行 npm publish
