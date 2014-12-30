@@ -34,7 +34,11 @@ module.exports = Menu;
 ```js
 var Menu = React.createClass({
   render: function(){
-    return (<div className="rc-menu {this.props.className}">TODO</div>);
+    var className = "rc-menu";
+    if(this.props.className){
+      className += ' '+this.props.className;
+    }
+    return (<div className={className}>TODO</div>);
   }
 });
 ```
@@ -60,7 +64,6 @@ var Menu = React.createClass({
 
 \````js
 /** @jsx React.DOM */
-var React = require('react');
 React.render(<Menu className = "nav-bar nav"></Menu>, document.getElementById('react-content'));
 \````
 
