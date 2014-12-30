@@ -17,6 +17,7 @@ author: yiminghe@gmail.com
 - js 模块采用 commonjs 格式，主体代码放在 lib 目录下，根目录 index.js 仅引用 lib 下相关文件
 - 公共包通过 npm install 后，js 中可以 require node_modules 下的公共包 js，但不可以 require css
 - 模块如果返回值是个类，则文件名首字母大写
+- 只能 require('react') 不可以 require('react/addons')
 - React 类必须用一个变量声明
 
 Menu.js
@@ -69,6 +70,7 @@ React.render(<Menu className = "nav-bar nav"></Menu>, document.getElementById('r
 
 - 代码位于 `tests/xx-spec.js` `index-spec.js` 为必须，里面可以 require 其他 spec
 - 测试用例 js 采用 commonjs 格式，可以 require node_modules 下的公共包的 js 和 css
+- 可以 require('react') 以及 require('react/addons')
 - 测试框架为 mocha，断言库为 expect.js
 
 ## 示例
