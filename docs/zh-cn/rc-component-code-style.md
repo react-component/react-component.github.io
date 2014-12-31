@@ -43,6 +43,33 @@ var Menu = React.createClass({
 });
 ```
 
+- 组件是 react-component 而不是 react-bootstrap，不要把一些bootstrap的样式生搬过来，例如
+
+```js
+var Dialog = React.createClass({
+  render: function(){
+    return <div className='modal-dialog rc-dialog'>
+      <div className='rc-dialog-header modal-header'></div>
+    </div>
+  }
+});
+```
+
+组件和 bootstrap css 绑定过紧，样式和 js 不一致，建议通过属性来解决：
+
+```js
+// 伪代码
+var Dialog = React.createClass({
+  render: function(){
+    return <div className='{this.props.className} rc-dialog'>
+      <div className='rc-dialog-header {this.props.headerClassName}'></div>
+    </div>
+  }
+});
+```
+
+用户如果使用 bootstrap 可以通过配置达到
+
 ### css 源码
 
 - 样式采用 less 语法
