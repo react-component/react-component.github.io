@@ -11,6 +11,20 @@ author: yiminghe@gmail.com
 
 - 使用 https://github.com/react-component/generator-rc 搭建脚手架
 
+### 目录结构
+
+```
+- .travis.yml
+- examples
+ - index.md
+- lib
+ - Component.js
+- index.js
+- tests
+  - index-spec.js
+- package.json
+```
+
 ## 源码
 
 - 在 lib 目录中写 js，在 assets 目录下写 less，在 tests 目录下写 测试用例，代码规范参考 [react 组件代码规范](./rc-component-code-style.md).
@@ -20,11 +34,11 @@ author: yiminghe@gmail.com
 
 ### travis-ci
 
-登陆 travis 后访问 http://https://travis-ci.org/profile 开启对应 git 库
+使用 github 账号登陆 travis 后访问 http://https://travis-ci.org/profile 开启对应 git 库
 
 ### coveralls.io
 
-登陆 travis 后访问 https://coveralls.io/repos/new 开启对应 git 库
+使用 github 账号登陆 coveralls 后访问 https://coveralls.io/repos/new 开启对应 git 库
 
 ### saucelabs.com
 
