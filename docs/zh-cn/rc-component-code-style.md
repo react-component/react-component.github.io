@@ -30,7 +30,7 @@ author: yiminghe@gmail.com
 - examples 引入 bootstrap 样式，通过配置组件的 className 使用 bootstrap 样式
 
 ```
-<link href="/node_modules/bootstrap/dist/css/bootstrap.css?nowrap"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
 \````html
 <div id="react-content"></div>
