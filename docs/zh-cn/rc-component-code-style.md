@@ -15,8 +15,14 @@ author: yiminghe@gmail.com
 
 - 代码通过 jshint（在根目录运行 `npm run lint`）
 - js 模块采用 commonjs 格式，主体代码放在 lib 目录下，根目录 index.js 仅引用 lib 下相关文件
+- log 使用 2.x debug 模块，不可以使用 console.log
+ ```js
+ var debug = require('debug'))('rc-menu');
+ debug('xxx');
+ ```
 - 公共包通过 npm install 后，js 中可以 require node_modules 下的公共包 js，但不可以 require css
 - 模块如果返回值是个类，则文件名首字母大写
+- 使用 propType 制定 react 组件属性的类型
 - 只能 require('react') 不可以 require('react/addons')
 - React 类必须用一个变量声明
 
@@ -24,6 +30,9 @@ Menu.js
 ```js
 var React = require('react');
 var Menu = React.createClass({
+  propTypes: {
+    active: React.PropTypes.bool
+  }
 });
 module.exports = Menu;
 ```
@@ -61,8 +70,8 @@ var Dialog = React.createClass({
 // 伪代码
 var Dialog = React.createClass({
   render: function(){
-    return <div className='{this.props.className} rc-dialog'>
-      <div className='rc-dialog-header {this.props.headerClassName}'></div>
+    return <div className='{this.props.componentClass} rc-dialog'>
+      <div className='rc-dialog-header {this.props.componentClass}-header'></div>
     </div>
   }
 });

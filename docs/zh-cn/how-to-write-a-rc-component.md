@@ -42,6 +42,7 @@ author: yiminghe@gmail.com
 
 ## 支持 spm
 
+- npm install spm -g
 - 修改 package.json 将源码中用到的库，从 dependencies 字段复制到 spm 字段
 
 ```js
