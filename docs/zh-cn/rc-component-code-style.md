@@ -13,77 +13,15 @@ author: yiminghe@gmail.com
 
 ### js 源码
 
-- 代码通过 jshint（在根目录运行 `npm run lint`）
-- js 模块采用 commonjs 格式，主体代码放在 lib 目录下，根目录 index.js 仅引用 lib 下相关文件
-- log 使用 2.x debug 模块，不可以使用 console.log
- ```js
- var debug = require('debug'))('rc-menu');
- debug('xxx');
- ```
-- 公共包通过 npm install 后，js 中可以 require node_modules 下的公共包 js，但不可以 require css
-- 模块如果返回值是个类，则文件名首字母大写
-- 使用 propType 制定 react 组件属性的类型
-- 只能 require('react') 不可以 require('react/addons')
-- React 类必须用一个变量声明
+详见 [js 源码规范](./code-style/js.md)
 
-Menu.js
-```js
-var React = require('react');
-var Menu = React.createClass({
-  propTypes: {
-    active: React.PropTypes.bool
-  }
-});
-module.exports = Menu;
-```
+### js 注释
 
-- 组件根节点样式名为 rc- 加上小写组件名，组件名单词间以 - 分隔
-- 组件允许用户通过 className 定制样式名
-
-```js
-var Menu = React.createClass({
-  render: function(){
-    var className = "rc-menu";
-    if(this.props.className){
-      className += ' '+this.props.className;
-    }
-    return (<div className={className}>TODO</div>);
-  }
-});
-```
-
-- 组件是 react-component 而不是 react-bootstrap，不要把一些bootstrap的样式生搬过来，例如
-
-```js
-var Dialog = React.createClass({
-  render: function(){
-    return <div className='modal-dialog rc-dialog'>
-      <div className='rc-dialog-header modal-header'></div>
-    </div>
-  }
-});
-```
-
-组件和 bootstrap css 绑定过紧，样式和 js 不一致，建议通过属性来解决：
-
-```js
-// 伪代码
-var Dialog = React.createClass({
-  render: function(){
-    return <div className='{this.props.componentClass} rc-dialog'>
-      <div className='rc-dialog-header {this.props.componentClass}-header'></div>
-    </div>
-  }
-});
-```
-
-用户如果使用 bootstrap 可以通过配置达到
+详见 [js 注释规范](./code-style/comment.md)
 
 ### css 源码
 
-- 样式采用 less 语法
-- less 中通过 `import "xx/xx.css"` 可以引用通过 `npm install` 后公共包 xx 内的 css
-- 建议直接用 bootstrap，bootstrap 没的自己写在 assets/bootstrap.less 中
+详见 [css 源码规范](./code-style/css.md)
 
 ### examples
 
