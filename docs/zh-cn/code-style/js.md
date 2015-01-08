@@ -170,11 +170,12 @@ module.exports = Menu;
 ```js
 var Menu = React.createClass({
   render: function(){
-    var className = this.props.prefixCls || "rc-menu";
+    var prefixCls = this.props.prefixCls;
+    var className = prefixCls || "rc-menu";
     if(this.props.className){
       className += ' '+this.props.className;
     }
-    return (<div className={className}> <span className="{this.props.prefixCls}-title"></span> TODO</div>);
+    return (<div className={className}> <span className={tprefixCls + "title"}></span> TODO</div>);
   }
 });
 ```
@@ -196,8 +197,9 @@ var Dialog = React.createClass({
 ```js
 var Dialog = React.createClass({
   render: function(){
-    return <div className='{prefixCls}'>
-      <div className='{prefixCls}-header'></div>
+    var prefixCls = this.props.prefixCls;
+    return <div className={prefixCls}>
+      <div className={prefixCls + "-header"}></div>
     </div>
   }
 });

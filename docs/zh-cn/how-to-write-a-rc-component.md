@@ -72,6 +72,15 @@ author: yiminghe@gmail.com
 }
 ```
 
+## 浏览器支持版本
+
+- ie8, ie8+, chrome, firefox 最新版
+- 可适当渐进降级，如 css 动画可以不支持 ie8
+
+## 功能要求
+
+- 支持基本的键盘访问，最好支持 [WAI-ARIA](http://www.w3.org/TR/wai-aria/)
+
 ## 支持 HISTORY.md
 
 - 通过在根目录运行 `npm run history` 生成 HISTORY.md
