@@ -78,7 +78,7 @@ if (foo) return;
 好
 
 ````
-var x = y + z
+var x = y + z;
 ````
 
 坏
@@ -175,7 +175,7 @@ var Menu = React.createClass({
     if(this.props.className){
       className += ' '+this.props.className;
     }
-    return (<div className={className}> <span className={tprefixCls + "title"}></span> TODO</div>);
+    return (<div className={className}> <span className={prefixCls + "-title"}></span> TODO</div>);
   }
 });
 ```

@@ -7,6 +7,9 @@
 - 建议直接用 bootstrap，bootstrap 没的自己写在 assets/bootstrap.less 中
 - 如果有独立样式则以 rc 为命名空间
 
+## 文件命名
+
+－ less 文件名推荐和 js 文件名对应，例如 lib/TimePanel.js 对应 assets/bootstrap/TimePanel.less
 
 ## 语义化
 
