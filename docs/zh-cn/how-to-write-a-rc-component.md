@@ -44,7 +44,7 @@ author: yiminghe@gmail.com
 
 - 访问 https://saucelabs.com/opensauce 注册对应 npm 包名的账号，
 - 以该账号登陆后，访问 https://docs.saucelabs.com/ci-integrations/travis-ci/
-- 在库根目录执行 `gem install travis` 和上述网页中的两个 `travis encrypt` 命令
+- 在库根目录执行 `gem install travis` (需要[设置 gem 镜像](https://ruby.taobao.org/)) 和上述网页中的两个 `travis encrypt` 命令
 
 ## 开发调试
 
