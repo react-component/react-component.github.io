@@ -136,17 +136,22 @@ var x=y+z
 
 对于单 var 模式和多 var 模式，不做强行约定，但同一个文件里，风格必须一致。
 
-
-## 其它
+## 文件命名
 
 - js 模块采用 commonjs 格式，主体代码放在 lib 目录下，根目录 index.js 仅引用 lib 下相关文件
+- lib 目录模块如果返回值是个类，则文件名首字母大写
+- 测试用例文件名以 .spec.js 结尾
+- 测试用例文件名推荐和 lib 下源码对应，比如 lib/Calendar.js 对应于 tests/Calendar.spec.js
+- 测试用例入口文件名为 index.spec.js，推荐里面只 require 其他测试用例
+
+## 代码格式
+
 - log 使用 2.x debug 模块，不可以使用 console.log
  ```js
  var debug = require('debug'))('rc-menu');
  debug('xxx');
  ```
 - 公共包通过 npm install 后，js 中可以 require node_modules 下的公共包 js，但不可以 require css
-- 模块如果返回值是个类，则文件名首字母大写
 - 使用 propType 制定 react 组件属性的类型
 - 只能 require('react') 不可以 require('react/addons') 以及 require('react/lib/xx')
 - 禁止使用 jquery 等大而全的类库
