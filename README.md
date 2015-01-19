@@ -26,3 +26,4 @@ http://react-component.github.io
 
 - [learning-react](https://github.com/yiminghe/learning-react)
 - [awesome-react](https://github.com/enaqx/awesome-react)
+- [react-learning](https://github.com/rpflorence/react-training)
