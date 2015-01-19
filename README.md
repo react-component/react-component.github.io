@@ -19,3 +19,10 @@ http://react-component.github.io
 - [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap/)
 - [react-forms](https://github.com/prometheusresearch/react-forms)
 - [react-router](https://github.com/rackt/react-router)
+- [flux-router-component](https://github.com/yahoo/flux-router-component)
+
+
+## tutorials
+
+- [learning-react](https://github.com/yiminghe/learning-react)
+- [awesome-react](https://github.com/enaqx/awesome-react)
