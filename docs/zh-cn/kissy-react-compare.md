@@ -147,7 +147,7 @@ react:
 React.render(<Menu onSelect={function(){}}><MenuItem></MenuItem></Menu>)
 ```
 
-#### 内部组件调用
+#### 组件方法
 
 react 中由于 `render` 等都是虚拟 dom，取得组件实例需要通过在虚拟 dom 中配置 `ref` 属性：https://github.com/react-component/menu/blob/45816af15fffb0c6e598602c289e39483fb1d6f7/lib/Menu.js#L152
 
@@ -156,6 +156,17 @@ react 中由于 `render` 等都是虚拟 dom，取得组件实例需要通过在
 而 kissy 由于没有虚拟 dom 这一层，组件方法可以直接调用：https://github.com/kissyteam/menu/blob/af4d3628ff1bd4d262ffc944297af21ea8039cc4/lib/menu/control.js#L118
 
 另外 react 不推荐组件的方法调用，推荐状态。而 kissy 若这么做，由于属性机制太弱，则得不偿失。
+
+##### addChild/removeChild
+
+react 就是不需要了，只要渲染 child 的个数有变化， react 会自动对这次没有出现的 child component 进行销毁，
+这里需要注意的是需要指定 child 的 key 属性，用来区分前后两次不同的 child component，这也是自动化所带来的代价。
+
+```js
+React.render(<Menu><MenuItem key="1">1</MenuItem><MenuItem key="2">2</MenuItem></Menu>,container);
+// remove MenuItem 1, call componentWillUnmount of MenuItem 1
+React.render(<Menu><MenuItem key="2">2</MenuItem></Menu>,container);
+```
 
 #### 生态圈/服务器端渲染
 
