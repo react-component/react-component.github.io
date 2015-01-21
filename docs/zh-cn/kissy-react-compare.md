@@ -168,6 +168,19 @@ React.render(<Menu><MenuItem key="1">1</MenuItem><MenuItem key="2">2</MenuItem><
 React.render(<Menu><MenuItem key="2">2</MenuItem></Menu>,container);
 ```
 
+#### 大小对比
+
+react calendar (比 kissy date-picker 多了时间选择功能): rc-calendar/1.4.1/index-debug.js 41.5k
+
+kissy date-picker: http://g.tbcdn.cn/kissy/5/0.2.0/date-picker-debug.js+  77.5k
+
+menu 奇迹发生了，大小竟然一样大:
+
+react menu: rc-menu/2.0.3/index-debug.js 23.3k
+
+kissy menu: http://g.tbcdn.cn/kissy/5/0.2.0/menu-debug.js 23.3k
+
+
 #### 生态圈/服务器端渲染
 
 kissy 生态圈为 gallery，一般只能客户端线上 cdn combo 使用。
