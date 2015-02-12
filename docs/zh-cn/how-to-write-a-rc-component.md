@@ -16,18 +16,21 @@ author: yiminghe@gmail.com
 ```
 - .travis.yml
 - examples
- - index.md
+ - index.js
+ - index.html
 - lib
  - Component.js
 - index.js
 - tests
   - index-spec.js
 - package.json
+- gh-pages.sh
 ```
 
 ## 源码
 
 - 在 lib 目录中写 js，在 assets 目录下写 less，在 tests 目录下写 测试用例，代码规范参考 [react 组件代码规范](./rc-component-code-style.md).
+- examples 中的 html 不可修改，通过 js 中的 jsx 渲染页面，通过 require css 引入 css
 - 开发中用到其他公共库，通过 `npm install --save` 以及 `npm install --save-dev` 来安装
 - 组件设计可参考 [react 组件设计原则](./rc-component-design.md).
 
@@ -53,7 +56,7 @@ author: yiminghe@gmail.com
 - 在项目根目录执行 `npm install`
 - 在项目根目录执行 `npm start`
 - 打开 `http://localhost:xxxx` 访问库, xxxx 为脚手架配置的网络端口
-- 打开 `http://localhost:xxxx/examples/index.md` 查看示例
+- 打开 `http://localhost:xxxx/examples/index.html` 查看示例
 - 打开 `http://localhost:xxxx/tests/runner.html` 运行测试
 
 ## 支持 spm
@@ -63,7 +66,7 @@ author: yiminghe@gmail.com
 
 ```js
 {
-  "dependencies":{
+  "devDependencies":{
     "react": "0.12.x"
   },
   "spm":{

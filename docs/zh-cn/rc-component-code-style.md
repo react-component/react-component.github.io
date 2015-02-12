@@ -25,27 +25,23 @@ author: yiminghe@gmail.com
 
 ### examples
 
-- examples 格式为 md，通过 \`\`\`\`js \`\`\`\`html 引入高亮并执行的代码，通过 \`\`\`js \`\`\`html 仅引入高亮的代码
+- examples 中的 html 不可修改，通过 js 中的 jsx 渲染页面，通过 require css 引入 css
 - \`\`\`\`js 中的 js 代码为 commonjs 格式，第一行为注释 `/** @jsx React.DOM */`
-- examples 引入 bootstrap 样式，通过配置组件的 className 使用 bootstrap 样式
 
-```
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-\````html
-<div id="react-content"></div>
-\````
-
+```js
 \````js
 /** @jsx React.DOM */
+require('rc-menu/assets/index.css');
+var Menu = require('rc-menu');
 React.render(<Menu className = "nav-bar nav"></Menu>, document.getElementById('react-content'));
 \````
-
 ```
+
+通过 gh-pages.sh 来发布 examples 到外网（需要同级clone xx-gh-pages ，详见 gh-pages.sh）
 
 ### tests
 
-- 代码位于 `tests/xx-spec.js` `index-spec.js` 为必须，里面可以 require 其他 spec
+- 代码位于 `tests/xx.spec.js` `index.spec.js` 为必须，里面可以 require 其他 spec
 - 测试用例 js 采用 commonjs 格式，可以 require node_modules 下的公共包的 js 和 css
 - 可以 require('react') 以及 require('react/addons')
 - 测试框架为 mocha，断言库为 expect.js
