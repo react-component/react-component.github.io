@@ -3,9 +3,14 @@
 
 ## 基础
 - 样式采用 less 语法
-- less 中通过 `@import "xx/xx.css"` 可以引用通过 `npm install` 后公共包 xx 内的 css
 - 建议直接用 bootstrap，bootstrap 没的自己写在 assets/bootstrap.less 中
 - 如果有独立样式则以 rc 为命名空间
+- 如果样式有依赖其他组件，需要建立对应的 js，例如 assets/bootstrap.js
+
+```js
+require('xx/assets/yy.css'); // depend other component's css
+require('./bootstrap.css');
+```
 
 ## 文件命名
 
