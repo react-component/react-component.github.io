@@ -139,4 +139,36 @@ eventKey 用来唯一标示 tabs 的 tabpane，同时 tabs 通过 activeKey 来�
 
 ## 避免使用 ref
 
-TODO
+使用父组件的 state 控制子组件的状态而不是直接通过 ref 操作子组件
+
+错误
+
+```
+{
+  handleClick(){
+    this.refs.x.setState({count:count});
+  }
+
+  render(){
+    return <div onClick={this.handleClick}>
+    <X ref='x'/>
+    </div>
+  }
+}
+```
+
+正确
+
+```
+{
+  handleClick(){
+    this.setState({count:count});
+  }
+
+  render(){
+    return <div onClick={this.handleClick}>
+    <X count={this.state.count}/>
+    </div>
+  }
+}
+```
