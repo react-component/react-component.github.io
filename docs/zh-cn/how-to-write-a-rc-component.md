@@ -22,9 +22,8 @@ author: yiminghe@gmail.com
  - Component.js
 - index.js
 - tests
-  - index-spec.js
+  - index.spec.js
 - package.json
-- gh-pages.sh
 ```
 
 ## 源码

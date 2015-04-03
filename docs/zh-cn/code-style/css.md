@@ -82,7 +82,12 @@ Class 已经模块化命名，从类名上已经可以清晰的分辨元素的�
 
 统一命名风格（使用相同名词命名不同组件的子元素）：如 rc-tab-hd, rc-modal-hd，便于理解。
 
+## 进一步
+
+BEM css 命名规划
+
 ## 参考
 
 - http://aliceui.org/docs/rule.html
 - http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
+- http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/

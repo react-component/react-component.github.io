@@ -37,7 +37,7 @@ React.render(<Menu className = "nav-bar nav"></Menu>, document.getElementById('r
 \````
 ```
 
-通过 gh-pages.sh 来发布 examples 到外网（需要同级clone xx-gh-pages ，详见 gh-pages.sh）
+通过 npm run gh-pages 来发布 examples 到外网（需要同级clone xx-gh-pages ，详见 gh-pages.sh）
 
 ### tests
 
