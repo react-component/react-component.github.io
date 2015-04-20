@@ -96,6 +96,11 @@ author: yiminghe@gmail.com
  - `improved` 接口增强、健壮性和性能提升、代码优化、依赖模块升级等。
  - `changed` 涉及到兼容性变化的改动。
 
+## 提交 review
+
+- 代码提交至 dev 分支
+- 提交 pr 到 master，指定 reviewer
+
 ## 发布
 
 - 在根目录运行 npm publish
