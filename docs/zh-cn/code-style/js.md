@@ -139,9 +139,10 @@ var x=y+z
 ## 文件命名
 
 - js 模块采用 commonjs 格式，主体代码放在 lib 目录下，根目录 index.js 仅引用 lib 下相关文件
+- 若用到了 jsx 语法或 es6 特性，文件后缀名请改做 jsx
 - lib 目录模块如果返回值是个类，则文件名首字母大写
-- 测试用例文件名以 .spec.js 结尾
-- 测试用例文件名推荐和 lib 下源码对应，比如 lib/Calendar.js 对应于 tests/Calendar.spec.js
+- 测试用例文件名以 .spec.js(jsx) 结尾
+- 测试用例文件名推荐和 lib 下源码对应，比如 lib/Calendar.jsx 对应于 tests/Calendar.spec.jsx
 - 测试用例入口文件名为 index.spec.js，推荐里面只 require 其他测试用例
 
 ## 代码格式

@@ -14,8 +14,9 @@ require('./bootstrap.css');
 
 ## 文件命名
 
-－ less 文件名推荐和 js 文件名对应，例如 lib/TimePanel.js 对应 assets/bootstrap/TimePanel.less
-－ index.less 等入口文件名小写，推荐里面只 import 对应的 less 源码
+- less 文件名推荐和 js 文件名对应，例如 lib/TimePanel.js 对应 assets/bootstrap/TimePanel.less
+- index.less 等入口文件名小写，推荐里面只 import 对应的 less 源码
+- 公共样式请联系 再飞 加入公共样式库，在组件中 devDependencies 依赖公共样式
 
 ## 语义化
 
