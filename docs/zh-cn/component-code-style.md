@@ -26,11 +26,10 @@ author: yiminghe@gmail.com
 ### examples
 
 - examples 中的 html 不可修改，通过 js 中的 jsx 渲染页面，通过 require css 引入 css
-- \`\`\`\`js 中的 js 代码为 commonjs 格式，第一行为注释 `/** @jsx React.DOM */`
+- \`\`\`\`js 中的 js 代码为 commonjs 格式
 
 ```js
 \````js
-/** @jsx React.DOM */
 require('rc-menu/assets/index.css');
 var Menu = require('rc-menu');
 React.render(<Menu className = "nav-bar nav"></Menu>, document.getElementById('react-content'));
