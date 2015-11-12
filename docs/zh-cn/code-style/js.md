@@ -171,7 +171,7 @@ var x=y+z
 
 Menu.js
 ```js
-var React = require('react');
+import React from 'react';
 var Menu = React.createClass({
   propTypes: {
     active: React.PropTypes.bool

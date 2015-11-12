@@ -18,8 +18,8 @@ author: yiminghe@gmail.com
 - examples
  - index.js
  - index.html
-- lib
- - Component.js
+- src
+ - Component.jsx
 - index.js
 - tests
   - index.spec.js
@@ -28,7 +28,7 @@ author: yiminghe@gmail.com
 
 ## 源码
 
-- 在 lib 目录中写 js，在 assets 目录下写 less，在 tests 目录下写 测试用例，代码规范参考 [react 组件代码规范](./component-code-style.md).
+- 在 src 目录中写 es2015 js，在 assets 目录下写 less，在 tests 目录下写 测试用例，代码规范参考 [react 组件代码规范](./component-code-style.md).
 - examples 中的 html 不可修改，通过 js 中的 jsx 渲染页面，通过 require css 引入 css
 - 开发中用到其他公共库，通过 `npm install --save` 以及 `npm install --save-dev` 来安装
 - 组件设计可参考 [react 组件设计原则](./component-design.md).
@@ -58,23 +58,6 @@ author: yiminghe@gmail.com
 - 打开 `http://localhost:xxxx/examples/index.html` 查看示例
 - 打开 `http://localhost:xxxx/tests/runner.html` 运行测试
 
-## 支持 spm
-
-- npm install spm -g
-- 修改 package.json 将源码中用到的库，从 dependencies 字段复制到 spm 字段
-
-```js
-{
-  "devDependencies":{
-    "react": "0.12.x"
-  },
-  "spm":{
-    "dependencies":{
-      "react": "0.12.x"
-    }
-  }
-}
-```
 
 ## 浏览器支持版本
 
@@ -85,7 +68,7 @@ author: yiminghe@gmail.com
 
 - 支持基本的键盘访问，最好支持 [WAI-ARIA](http://www.w3.org/TR/wai-aria/)
 
-## 支持 HISTORY.md
+## 可选的支持 HISTORY.md
 
 - 通过在根目录运行 `npm run history` 生成 HISTORY.md
 - 需要建立必要的 milestone，issue，label，参见： https://github.com/yiminghe/gh-history
@@ -103,4 +86,4 @@ author: yiminghe@gmail.com
 
 ## 发布
 
-- 在根目录运行 npm publish
+- 在根目录运行 npm run pub

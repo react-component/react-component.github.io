@@ -8,7 +8,7 @@ author: yiminghe@gmail.com
 ### 总体
 
 - 使用 generator-rc, rc-tools, rc-server 基础设施
-- 组件需要支持 travis, coveralls, saucelabs, npm, spm
+- 组件需要支持 travis, coveralls, saucelabs, npm
 - 组件功能点需要有测试用例，示例，js 源码，可选的 css 源码
 
 ### js 源码
@@ -41,8 +41,7 @@ React.render(<Menu className = "nav-bar nav"></Menu>, document.getElementById('r
 ### tests
 
 - 代码位于 `tests/xx.spec.js` `index.spec.js` 为必须，里面可以 require 其他 spec
-- 测试用例 js 采用 commonjs 格式，可以 require node_modules 下的公共包的 js 和 css
-- 可以 require('react') 以及 require('react/addons')
+- 测试用例 js 采用 es2015 格式，可以 import node_modules 下的公共包的 js 和 css
 - 测试框架为 mocha，断言库为 expect.js
 
 ## 示例
