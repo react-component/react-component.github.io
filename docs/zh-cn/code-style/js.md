@@ -1,6 +1,6 @@
 # js 编码规范
 
-代码通过 jshint（在根目录运行 `npm run lint`），熟悉规范参见如下
+代码通过 eslint（在根目录运行 `npm run lint`），熟悉规范参见如下
 
 ## 具体书写规范
 
@@ -147,6 +147,17 @@ var x=y+z
 
 ## 代码格式
 
+- 生成 React 组件类使用 React.createClass,不要使用 es6 class, es6 class 无法实现 mixin 功能, 并且不能自动绑定
+ ```js
+   var Component = React.createClass({
+     onClick() {
+       // ...
+     },
+     render() {
+       return <div onClick={this.onClick}/>;
+     }
+   });
+ ```
 - log 使用 2.x debug 模块，不可以使用 console.log
  ```js
  var debug = require('debug'))('rc-menu');
