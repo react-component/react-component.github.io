@@ -25,22 +25,22 @@ author: yiminghe@gmail.com
 
 ### examples
 
-- examples 中的 html 不可修改，通过 js 中的 jsx 渲染页面，通过 require css 引入 css
-- \`\`\`\`js 中的 js 代码为 commonjs 格式
+- examples 中的 html 不可修改，通过 js 中的 jsx 渲染页面，通过 import css 引入 css
+- \`\`\`\`js 中的 js 代码为 es2015 格式
 
 ```js
 \````js
-require('rc-menu/assets/index.css');
+import 'rc-menu/assets/index.less';
 var Menu = require('rc-menu');
 React.render(<Menu className = "nav-bar nav"></Menu>, document.getElementById('react-content'));
 \````
 ```
 
-通过 npm run gh-pages 来发布 examples 到外网（需要同级clone xx-gh-pages ，详见 gh-pages.sh）
+通过 npm run pub 来发布 npm 以及 demo, 例如 http://react-component.github.io/calendar/
 
 ### tests
 
-- 代码位于 `tests/xx.spec.js` `index.spec.js` 为必须，里面可以 require 其他 spec
+- 代码位于 `tests/xx.spec.js` `index.spec.js` 为必须，里面可以 import 其他 spec
 - 测试用例 js 采用 es2015 格式，可以 import node_modules 下的公共包的 js 和 css
 - 测试框架为 mocha，断言库为 expect.js
 

@@ -29,7 +29,7 @@ author: yiminghe@gmail.com
 ## 源码
 
 - 在 src 目录中写 es2015 js，在 assets 目录下写 less，在 tests 目录下写 测试用例，代码规范参考 [react 组件代码规范](./component-code-style.md).
-- examples 中的 html 不可修改，通过 js 中的 jsx 渲染页面，通过 require css 引入 css
+- examples 中的 html 不可修改，通过 js 中的 jsx 渲染页面，通过 import css 引入 css
 - 开发中用到其他公共库，通过 `npm install --save` 以及 `npm install --save-dev` 来安装
 - 组件设计可参考 [react 组件设计原则](./component-design.md).
 

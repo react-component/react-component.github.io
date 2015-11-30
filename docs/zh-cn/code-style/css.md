@@ -3,20 +3,18 @@
 
 ## 基础
 - 样式采用 less 语法
-- 建议直接用 bootstrap，bootstrap 没的自己写在 assets/bootstrap.less 中
-- 如果有独立样式则以 rc 为命名空间
-- 如果样式有依赖其他组件，需要建立对应的 js，例如 assets/bootstrap.js
+- 样式则以 rc 为命名空间
+- 如果样式有依赖其他组件，需要建立对应的 js，例如 src/assets/bootstrap.js
 
 ```js
-require('xx/assets/yy.css'); // depend other component's css
-require('./bootstrap.css');
+require('xx/src/assets/yy.css'); // depend other component's css
+require('../assets/bootstrap.less');
 ```
 
 ## 文件命名
 
-- less 文件名推荐和 js 文件名对应，例如 lib/TimePanel.js 对应 assets/bootstrap/TimePanel.less
+- less 文件名推荐和 js 文件名对应，例如 lib/TimePanel.js 对应 assets/index/TimePanel.less
 - index.less 等入口文件名小写，推荐里面只 import 对应的 less 源码
-- 公共样式请联系 再飞 加入公共样式库，在组件中 devDependencies 依赖公共样式
 
 ## 语义化
 
