@@ -7,7 +7,7 @@ author: yiminghe@gmail.com
 
 ### 总体
 
-- 使用 generator-rc, @rc-component/tools, @rc-component/server 基础设施
+- 使用 generator-rc, rc-tools, rc-server 基础设施
 - 组件需要支持 travis, coveralls, saucelabs, npm
 - 组件功能点需要有测试用例，示例，js 源码，可选的 css 源码
 
@@ -30,8 +30,8 @@ author: yiminghe@gmail.com
 
 ```js
 \````js
-import '@rc-component/menu/assets/index.less';
-var Menu = require('@rc-component/menu');
+import 'rc-menu/assets/index.less';
+var Menu = require('rc-menu');
 React.render(<Menu className = "nav-bar nav"></Menu>, document.getElementById('react-content'));
 \````
 ```
